@@ -1,0 +1,11 @@
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\bin\Debug\Proj2-BigBuckBank.exe.config
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\bin\Debug\Proj2-BigBuckBank.exe
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\bin\Debug\Proj2-BigBuckBank.pdb
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\obj\Debug\Proj2-BigBuckBank.csprojResolveAssemblyReference.cache
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\obj\Debug\Proj2_BigBuckBank.Properties.Resources.resources
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\obj\Debug\Proj2-BigBuckBank.csproj.GenerateResource.Cache
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\obj\Debug\Proj2-BigBuckBank.exe
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\obj\Debug\Proj2-BigBuckBank.pdb
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\obj\Debug\Proj2_BigBuckBank.FrmLogin.resources
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\obj\Debug\Proj2_BigBuckBank.FrmAdmin.resources
+C:\Users\Fei\Documents\Courses\CIT287\Proj2-BigBuckBank\obj\Debug\Proj2_BigBuckBank.FrmUserMenu.resources
