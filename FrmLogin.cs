@@ -15,7 +15,8 @@ namespace Proj2_BigBuckBank
         int numOfTrial;
         AdminAcct adminAcct;
         public List<User> userList = new List<User>(); // List of users
-
+        IEnumerable<User> currentUserQuery;
+        User currentUser;
         DataToAdmin dataToAdmin;
 
         public FrmLogin()
@@ -56,8 +57,16 @@ namespace Proj2_BigBuckBank
             }
             else
             {
+
+                //TODO search in userList and assign to currentUSer
+                currentUserQuery = from user in userList
+                                   where user.getUserId() == userId
+                                   select user;
+                foreach (User user in currentUserQuery) // TODO only one user in query, other method than foreach???
+                    currentUser = user;
+
                 //TODO open new dialog
-                FrmUserMenu userMenu = new FrmUserMenu(this);
+                FrmUserMenu userMenu = new FrmUserMenu(this, currentUser);
                 //passDataToUserMenu(userMenu, userList[1]);
                 DialogResult selectedButton =  userMenu.ShowDialog();
                 if (selectedButton == DialogResult.Yes) // when userMenu returns, refresh test display
@@ -191,7 +200,7 @@ namespace Proj2_BigBuckBank
 // /////////////////////class for each User data
     public class User
     {
-        string userId;
+        public string userId;
         string password;
         int checkAcctNum;
         int saveAcctNum;

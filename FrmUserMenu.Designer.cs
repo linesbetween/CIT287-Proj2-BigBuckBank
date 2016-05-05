@@ -34,14 +34,16 @@
             this.rBtnBalance = new System.Windows.Forms.RadioButton();
             this.rBtnTransfer = new System.Windows.Forms.RadioButton();
             this.rBtnExit = new System.Windows.Forms.RadioButton();
+            this.gBoxMenu = new System.Windows.Forms.GroupBox();
+            this.gBoxMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTest
             // 
             this.btnTest.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnTest.Location = new System.Drawing.Point(293, 442);
+            this.btnTest.Location = new System.Drawing.Point(439, 508);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(134, 42);
+            this.btnTest.Size = new System.Drawing.Size(146, 44);
             this.btnTest.TabIndex = 0;
             this.btnTest.Text = "Test";
             this.btnTest.UseVisualStyleBackColor = true;
@@ -50,20 +52,21 @@
             // rBtnDeposit
             // 
             this.rBtnDeposit.AutoSize = true;
-            this.rBtnDeposit.Location = new System.Drawing.Point(257, 120);
+            this.rBtnDeposit.Location = new System.Drawing.Point(98, 51);
             this.rBtnDeposit.Name = "rBtnDeposit";
-            this.rBtnDeposit.Size = new System.Drawing.Size(170, 29);
+            this.rBtnDeposit.Size = new System.Drawing.Size(190, 29);
             this.rBtnDeposit.TabIndex = 1;
             this.rBtnDeposit.TabStop = true;
             this.rBtnDeposit.Text = "Make a deposit";
             this.rBtnDeposit.UseVisualStyleBackColor = true;
+            this.rBtnDeposit.CheckedChanged += new System.EventHandler(this.rBtnDeposit_CheckedChanged);
             // 
             // rBtnWithdraw
             // 
             this.rBtnWithdraw.AutoSize = true;
-            this.rBtnWithdraw.Location = new System.Drawing.Point(257, 170);
+            this.rBtnWithdraw.Location = new System.Drawing.Point(98, 111);
             this.rBtnWithdraw.Name = "rBtnWithdraw";
-            this.rBtnWithdraw.Size = new System.Drawing.Size(189, 29);
+            this.rBtnWithdraw.Size = new System.Drawing.Size(209, 29);
             this.rBtnWithdraw.TabIndex = 2;
             this.rBtnWithdraw.TabStop = true;
             this.rBtnWithdraw.Text = "Make a Withdraw";
@@ -72,9 +75,9 @@
             // rBtnBalance
             // 
             this.rBtnBalance.AutoSize = true;
-            this.rBtnBalance.Location = new System.Drawing.Point(257, 225);
+            this.rBtnBalance.Location = new System.Drawing.Point(98, 170);
             this.rBtnBalance.Name = "rBtnBalance";
-            this.rBtnBalance.Size = new System.Drawing.Size(170, 29);
+            this.rBtnBalance.Size = new System.Drawing.Size(188, 29);
             this.rBtnBalance.TabIndex = 3;
             this.rBtnBalance.TabStop = true;
             this.rBtnBalance.Text = "Check Balance";
@@ -83,9 +86,9 @@
             // rBtnTransfer
             // 
             this.rBtnTransfer.AutoSize = true;
-            this.rBtnTransfer.Location = new System.Drawing.Point(257, 277);
+            this.rBtnTransfer.Location = new System.Drawing.Point(99, 233);
             this.rBtnTransfer.Name = "rBtnTransfer";
-            this.rBtnTransfer.Size = new System.Drawing.Size(170, 29);
+            this.rBtnTransfer.Size = new System.Drawing.Size(189, 29);
             this.rBtnTransfer.TabIndex = 4;
             this.rBtnTransfer.TabStop = true;
             this.rBtnTransfer.Text = "Transfer Funds";
@@ -94,30 +97,41 @@
             // rBtnExit
             // 
             this.rBtnExit.AutoSize = true;
-            this.rBtnExit.Location = new System.Drawing.Point(257, 331);
+            this.rBtnExit.Location = new System.Drawing.Point(99, 293);
             this.rBtnExit.Name = "rBtnExit";
-            this.rBtnExit.Size = new System.Drawing.Size(69, 29);
+            this.rBtnExit.Size = new System.Drawing.Size(79, 29);
             this.rBtnExit.TabIndex = 5;
             this.rBtnExit.TabStop = true;
             this.rBtnExit.Text = "Exit";
             this.rBtnExit.UseVisualStyleBackColor = true;
             // 
+            // gBoxMenu
+            // 
+            this.gBoxMenu.Controls.Add(this.rBtnDeposit);
+            this.gBoxMenu.Controls.Add(this.rBtnExit);
+            this.gBoxMenu.Controls.Add(this.rBtnWithdraw);
+            this.gBoxMenu.Controls.Add(this.rBtnTransfer);
+            this.gBoxMenu.Controls.Add(this.rBtnBalance);
+            this.gBoxMenu.Location = new System.Drawing.Point(178, 71);
+            this.gBoxMenu.Name = "gBoxMenu";
+            this.gBoxMenu.Size = new System.Drawing.Size(407, 383);
+            this.gBoxMenu.TabIndex = 6;
+            this.gBoxMenu.TabStop = false;
+            this.gBoxMenu.Text = "Menu";
+            // 
             // FrmUserMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 569);
+            this.ClientSize = new System.Drawing.Size(792, 593);
             this.ControlBox = false;
-            this.Controls.Add(this.rBtnExit);
-            this.Controls.Add(this.rBtnTransfer);
-            this.Controls.Add(this.rBtnBalance);
-            this.Controls.Add(this.rBtnWithdraw);
-            this.Controls.Add(this.rBtnDeposit);
+            this.Controls.Add(this.gBoxMenu);
             this.Controls.Add(this.btnTest);
             this.Name = "FrmUserMenu";
             this.Text = "User Menu";
+            this.gBoxMenu.ResumeLayout(false);
+            this.gBoxMenu.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -129,5 +143,6 @@
         private System.Windows.Forms.RadioButton rBtnBalance;
         private System.Windows.Forms.RadioButton rBtnTransfer;
         private System.Windows.Forms.RadioButton rBtnExit;
+        private System.Windows.Forms.GroupBox gBoxMenu;
     }
 }

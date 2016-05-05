@@ -46,72 +46,72 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(166, 70);
+            this.label1.Location = new System.Drawing.Point(181, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.Size = new System.Drawing.Size(153, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "User ID";
+            this.label1.Text = "User ID (Case)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(166, 135);
+            this.label2.Location = new System.Drawing.Point(181, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
+            this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(166, 285);
+            this.label3.Location = new System.Drawing.Point(181, 297);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 25);
+            this.label3.Size = new System.Drawing.Size(72, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Admin";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 350);
+            this.label4.Location = new System.Drawing.Point(181, 365);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 25);
+            this.label4.Size = new System.Drawing.Size(126, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Admin PSW";
             // 
             // txtUserId
             // 
-            this.txtUserId.Location = new System.Drawing.Point(318, 70);
+            this.txtUserId.Location = new System.Drawing.Point(347, 73);
             this.txtUserId.Name = "txtUserId";
-            this.txtUserId.Size = new System.Drawing.Size(205, 29);
+            this.txtUserId.Size = new System.Drawing.Size(223, 31);
             this.txtUserId.TabIndex = 4;
             // 
             // txtUserPsw
             // 
-            this.txtUserPsw.Location = new System.Drawing.Point(318, 130);
+            this.txtUserPsw.Location = new System.Drawing.Point(347, 135);
             this.txtUserPsw.Name = "txtUserPsw";
-            this.txtUserPsw.Size = new System.Drawing.Size(205, 29);
+            this.txtUserPsw.Size = new System.Drawing.Size(223, 31);
             this.txtUserPsw.TabIndex = 5;
             // 
             // txtAdminId
             // 
-            this.txtAdminId.Location = new System.Drawing.Point(318, 280);
+            this.txtAdminId.Location = new System.Drawing.Point(347, 292);
             this.txtAdminId.Name = "txtAdminId";
-            this.txtAdminId.Size = new System.Drawing.Size(205, 29);
+            this.txtAdminId.Size = new System.Drawing.Size(223, 31);
             this.txtAdminId.TabIndex = 6;
             // 
             // txtAdminPsw
             // 
-            this.txtAdminPsw.Location = new System.Drawing.Point(318, 345);
+            this.txtAdminPsw.Location = new System.Drawing.Point(347, 359);
             this.txtAdminPsw.Name = "txtAdminPsw";
-            this.txtAdminPsw.Size = new System.Drawing.Size(205, 29);
+            this.txtAdminPsw.Size = new System.Drawing.Size(223, 31);
             this.txtAdminPsw.TabIndex = 7;
             // 
             // btnUserLogin
             // 
-            this.btnUserLogin.Location = new System.Drawing.Point(365, 202);
+            this.btnUserLogin.Location = new System.Drawing.Point(398, 210);
             this.btnUserLogin.Name = "btnUserLogin";
-            this.btnUserLogin.Size = new System.Drawing.Size(157, 40);
+            this.btnUserLogin.Size = new System.Drawing.Size(171, 42);
             this.btnUserLogin.TabIndex = 8;
             this.btnUserLogin.Text = "User Login";
             this.btnUserLogin.UseVisualStyleBackColor = true;
@@ -119,9 +119,9 @@
             // 
             // btnAdminLogin
             // 
-            this.btnAdminLogin.Location = new System.Drawing.Point(365, 408);
+            this.btnAdminLogin.Location = new System.Drawing.Point(398, 425);
             this.btnAdminLogin.Name = "btnAdminLogin";
-            this.btnAdminLogin.Size = new System.Drawing.Size(156, 37);
+            this.btnAdminLogin.Size = new System.Drawing.Size(170, 39);
             this.btnAdminLogin.TabIndex = 9;
             this.btnAdminLogin.Text = "Admin Login";
             this.btnAdminLogin.UseVisualStyleBackColor = true;
@@ -129,34 +129,34 @@
             // 
             // txtTest
             // 
-            this.txtTest.Location = new System.Drawing.Point(612, 70);
+            this.txtTest.Location = new System.Drawing.Point(668, 73);
             this.txtTest.Multiline = true;
             this.txtTest.Name = "txtTest";
             this.txtTest.ReadOnly = true;
-            this.txtTest.Size = new System.Drawing.Size(568, 172);
+            this.txtTest.Size = new System.Drawing.Size(619, 179);
             this.txtTest.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(612, 285);
+            this.label5.Location = new System.Drawing.Point(668, 297);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 25);
+            this.label5.Size = new System.Drawing.Size(54, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "Trial";
             // 
             // txtNumOfTrial
             // 
-            this.txtNumOfTrial.Location = new System.Drawing.Point(710, 285);
+            this.txtNumOfTrial.Location = new System.Drawing.Point(775, 297);
             this.txtNumOfTrial.Name = "txtNumOfTrial";
-            this.txtNumOfTrial.Size = new System.Drawing.Size(100, 29);
+            this.txtNumOfTrial.Size = new System.Drawing.Size(109, 31);
             this.txtNumOfTrial.TabIndex = 12;
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 510);
+            this.ClientSize = new System.Drawing.Size(1351, 531);
             this.ControlBox = false;
             this.Controls.Add(this.txtNumOfTrial);
             this.Controls.Add(this.label5);

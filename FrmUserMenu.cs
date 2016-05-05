@@ -13,23 +13,31 @@ namespace Proj2_BigBuckBank
     public partial class FrmUserMenu : Form
     {
         FrmLogin frmLogin;
-        //User user;
+        User user;
 
         public FrmUserMenu()
         {
             InitializeComponent();
         }
 
-        public FrmUserMenu(FrmLogin frmLogin):this()
+        public FrmUserMenu(FrmLogin frmLogin, User currentUser):this()
         {
             this.frmLogin = frmLogin; // ny reference???
+            user = currentUser;
+    
         }
 
         //public void setUser(User user){ this.user = user;}
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            frmLogin.userList[1].setStartBalance(800);
-        } //TODO should pass by ref???
+            user.setStartBalance(800);
+        }
+
+        private void rBtnDeposit_CheckedChanged(object sender, EventArgs e)
+        {
+
+        } 
+
     }
 }
