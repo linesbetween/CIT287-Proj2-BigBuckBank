@@ -38,15 +38,12 @@
             this.txtAdminPsw = new System.Windows.Forms.TextBox();
             this.btnUserLogin = new System.Windows.Forms.Button();
             this.btnAdminLogin = new System.Windows.Forms.Button();
-            this.txtTest = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNumOfTrial = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(166, 70);
+            this.label1.Location = new System.Drawing.Point(106, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 25);
             this.label1.TabIndex = 0;
@@ -55,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(166, 135);
+            this.label2.Location = new System.Drawing.Point(106, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 1;
@@ -64,7 +61,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(166, 285);
+            this.label3.Location = new System.Drawing.Point(106, 285);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 25);
             this.label3.TabIndex = 2;
@@ -73,7 +70,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 350);
+            this.label4.Location = new System.Drawing.Point(106, 350);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 25);
             this.label4.TabIndex = 3;
@@ -81,35 +78,35 @@
             // 
             // txtUserId
             // 
-            this.txtUserId.Location = new System.Drawing.Point(318, 70);
+            this.txtUserId.Location = new System.Drawing.Point(258, 70);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(205, 29);
             this.txtUserId.TabIndex = 4;
             // 
             // txtUserPsw
             // 
-            this.txtUserPsw.Location = new System.Drawing.Point(318, 130);
+            this.txtUserPsw.Location = new System.Drawing.Point(258, 130);
             this.txtUserPsw.Name = "txtUserPsw";
             this.txtUserPsw.Size = new System.Drawing.Size(205, 29);
             this.txtUserPsw.TabIndex = 5;
             // 
             // txtAdminId
             // 
-            this.txtAdminId.Location = new System.Drawing.Point(318, 280);
+            this.txtAdminId.Location = new System.Drawing.Point(258, 280);
             this.txtAdminId.Name = "txtAdminId";
             this.txtAdminId.Size = new System.Drawing.Size(205, 29);
             this.txtAdminId.TabIndex = 6;
             // 
             // txtAdminPsw
             // 
-            this.txtAdminPsw.Location = new System.Drawing.Point(318, 345);
+            this.txtAdminPsw.Location = new System.Drawing.Point(258, 345);
             this.txtAdminPsw.Name = "txtAdminPsw";
             this.txtAdminPsw.Size = new System.Drawing.Size(205, 29);
             this.txtAdminPsw.TabIndex = 7;
             // 
             // btnUserLogin
             // 
-            this.btnUserLogin.Location = new System.Drawing.Point(365, 202);
+            this.btnUserLogin.Location = new System.Drawing.Point(305, 202);
             this.btnUserLogin.Name = "btnUserLogin";
             this.btnUserLogin.Size = new System.Drawing.Size(157, 40);
             this.btnUserLogin.TabIndex = 8;
@@ -119,7 +116,7 @@
             // 
             // btnAdminLogin
             // 
-            this.btnAdminLogin.Location = new System.Drawing.Point(365, 408);
+            this.btnAdminLogin.Location = new System.Drawing.Point(305, 408);
             this.btnAdminLogin.Name = "btnAdminLogin";
             this.btnAdminLogin.Size = new System.Drawing.Size(156, 37);
             this.btnAdminLogin.TabIndex = 9;
@@ -127,40 +124,12 @@
             this.btnAdminLogin.UseVisualStyleBackColor = true;
             this.btnAdminLogin.Click += new System.EventHandler(this.btnAdminLogin_Click);
             // 
-            // txtTest
-            // 
-            this.txtTest.Location = new System.Drawing.Point(612, 70);
-            this.txtTest.Multiline = true;
-            this.txtTest.Name = "txtTest";
-            this.txtTest.ReadOnly = true;
-            this.txtTest.Size = new System.Drawing.Size(638, 172);
-            this.txtTest.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(612, 285);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 25);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Trial";
-            // 
-            // txtNumOfTrial
-            // 
-            this.txtNumOfTrial.Location = new System.Drawing.Point(710, 285);
-            this.txtNumOfTrial.Name = "txtNumOfTrial";
-            this.txtNumOfTrial.Size = new System.Drawing.Size(100, 29);
-            this.txtNumOfTrial.TabIndex = 12;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1302, 536);
+            this.ClientSize = new System.Drawing.Size(576, 536);
             this.ControlBox = false;
-            this.Controls.Add(this.txtNumOfTrial);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtTest);
             this.Controls.Add(this.btnAdminLogin);
             this.Controls.Add(this.btnUserLogin);
             this.Controls.Add(this.txtAdminPsw);
@@ -191,9 +160,6 @@
         private System.Windows.Forms.TextBox txtAdminPsw;
         private System.Windows.Forms.Button btnUserLogin;
         private System.Windows.Forms.Button btnAdminLogin;
-        private System.Windows.Forms.TextBox txtTest;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtNumOfTrial;
     }
 }
 

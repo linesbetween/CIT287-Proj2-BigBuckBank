@@ -46,11 +46,12 @@ namespace Proj2_BigBuckBank
                 accountNumList.Add(userList[i].getCheckAcct());
                 accountNumList.Add(userList[i].getSaveAcct());
             }
-
+            /*
                 for (int i = 0; i < userList.Count; i++)
                 {
                     txtTest.AppendText(userList[i].toString());
                 }
+             * */
         }
 
         private void btnUserLogin_Click(object sender, EventArgs e)
@@ -86,11 +87,14 @@ namespace Proj2_BigBuckBank
                     this.Visible = true;
                     this.clearDisplay();
 
+                    /*
                     txtTest.Clear();
                     for (int i = 0; i < userList.Count; i++)
                     {
                         txtTest.AppendText(userList[i].toString());
                     }
+                    */
+                    userMenu.Close();
                 }
             }
 
@@ -136,7 +140,7 @@ namespace Proj2_BigBuckBank
                 if (selectedButton == DialogResult.OK) // if Clear or Exit was clicked
                 {
                     numOfTrial = 0;
-                    txtNumOfTrial.Text = numOfTrial.ToString();
+                    //txtNumOfTrial.Text = numOfTrial.ToString();
                     txtUserId.Enabled = true;
                     txtUserPsw.Enabled = true;
                     btnUserLogin.Enabled = true;

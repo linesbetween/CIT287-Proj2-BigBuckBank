@@ -50,7 +50,11 @@ namespace Proj2_BigBuckBank
         private bool inputValid()
         {
             if (Validator.isDecimal(txtAcctNum, "Account Number") == false)
+            {
+                txtAcctNum.Text = "";
+                txtAmount.Text = "";
                 return false;
+            }
             else
                 return true;
         }

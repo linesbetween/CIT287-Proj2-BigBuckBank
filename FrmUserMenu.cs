@@ -17,6 +17,7 @@ namespace Proj2_BigBuckBank
         List<int> accountNumList;
         List<User> userList;
         string transactionsStr;
+        string receiptMsg;
         int accountFrom, accountTo;
         double transferAmount;
 
@@ -126,7 +127,45 @@ namespace Proj2_BigBuckBank
 
                 rBtnTransfer.Checked = false;
             }
+        }
+
+
+        private void rBtnExit_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rBtnExit.Checked == true)
+            {
+                DlgExit dlgExit = new DlgExit();
+                DialogResult selectedButton = dlgExit.ShowDialog();
+
+                if (selectedButton == DialogResult.Yes)
+                    Close();
+            }
+
+            rBtnExit.Checked = false;
         } 
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            receiptMsg =
+                       transactionsStr + Environment.NewLine +
+                       Environment.NewLine + "User Id: ".PadRight(8) + currentUser.userId.PadRight(8) +
+                       Environment.NewLine + "Checking account (last 4): ".PadRight(30) +
+                       currentUser.getLastDigits(currentUser.getCheckAcct(), 4).PadRight(12) +
+                       "balance: ".PadRight(10) + String.Format("{0:c2}", currentUser.getCheckAmount()).PadRight(12) +
+                       Environment.NewLine + "Saving account (last 4):   ".PadRight(30) +
+                       currentUser.getLastDigits(currentUser.getSaveAcct(), 4).PadRight(12) +
+                       "balance: ".PadRight(10) + String.Format("{0:c2}", currentUser.getSaveAmount()).PadRight(12);
+
+            FrmReceipt frmReceipt = new FrmReceipt(receiptMsg);
+            DialogResult selectedButton = frmReceipt.ShowDialog();
+            if (selectedButton == DialogResult.OK)
+            {
+                frmReceipt.Close();
+            }
+
+            this.DialogResult = DialogResult.OK;
+        }
+
 
 
     }

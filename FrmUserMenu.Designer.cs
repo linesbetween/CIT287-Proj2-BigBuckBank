@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTest = new System.Windows.Forms.Button();
             this.rBtnDeposit = new System.Windows.Forms.RadioButton();
             this.rBtnWithdraw = new System.Windows.Forms.RadioButton();
             this.rBtnBalance = new System.Windows.Forms.RadioButton();
@@ -39,17 +38,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.gBoxMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnTest
-            // 
-            this.btnTest.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnTest.Location = new System.Drawing.Point(415, 20);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(134, 42);
-            this.btnTest.TabIndex = 0;
-            this.btnTest.Text = "Test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // rBtnDeposit
             // 
@@ -109,6 +97,7 @@
             this.rBtnExit.TabStop = true;
             this.rBtnExit.Text = "Exit";
             this.rBtnExit.UseVisualStyleBackColor = true;
+            this.rBtnExit.CheckedChanged += new System.EventHandler(this.rBtnExit_CheckedChanged);
             // 
             // gBoxMenu
             // 
@@ -117,7 +106,7 @@
             this.gBoxMenu.Controls.Add(this.rBtnWithdraw);
             this.gBoxMenu.Controls.Add(this.rBtnTransfer);
             this.gBoxMenu.Controls.Add(this.rBtnBalance);
-            this.gBoxMenu.Location = new System.Drawing.Point(135, 68);
+            this.gBoxMenu.Location = new System.Drawing.Point(82, 45);
             this.gBoxMenu.Name = "gBoxMenu";
             this.gBoxMenu.Size = new System.Drawing.Size(414, 347);
             this.gBoxMenu.TabIndex = 6;
@@ -126,17 +115,18 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(354, 457);
+            this.btnPrint.Location = new System.Drawing.Point(301, 434);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(200, 42);
-            this.btnPrint.TabIndex = 7;
+            this.btnPrint.TabIndex = 0;
             this.btnPrint.Text = "Exit with Receipt";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(135, 457);
+            this.btnCancel.Location = new System.Drawing.Point(82, 434);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(200, 42);
             this.btnCancel.TabIndex = 8;
@@ -147,12 +137,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 569);
+            this.ClientSize = new System.Drawing.Size(576, 536);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.gBoxMenu);
-            this.Controls.Add(this.btnTest);
             this.Name = "FrmUserMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Menu";
@@ -164,7 +153,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.RadioButton rBtnDeposit;
         private System.Windows.Forms.RadioButton rBtnWithdraw;
         private System.Windows.Forms.RadioButton rBtnBalance;

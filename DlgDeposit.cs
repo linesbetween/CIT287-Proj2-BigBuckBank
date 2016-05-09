@@ -72,17 +72,21 @@ namespace Proj2_BigBuckBank
                     txtAmount.Text = "";
                 }
             }
-            
+
         }
 
         private bool inputValid()
         {
-            if (Validator.isDecimal(txtAcctNum, "Account Number") == false 
-                || Validator.isGreaterNum(0,txtAmount, "Amount") == false)
+            if (Validator.isDecimal(txtAcctNum, "Account Number") == false
+                || Validator.isGreaterNum(0, txtAmount, "Amount") == false)
+            {
+                txtAcctNum.Text = "";
+                txtAmount.Text = "";
                 return false;
-           // else if (Validator.isDecimal(txtAcctNum, "Account Number") == false 
-                //|| Validator.isDecimal(txtAmount, "Amount") == false)
-                //return false;
+            }
+            // else if (Validator.isDecimal(txtAcctNum, "Account Number") == false 
+            //|| Validator.isDecimal(txtAmount, "Amount") == false)
+            //return false;
             else
                 return true;
         }

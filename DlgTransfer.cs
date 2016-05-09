@@ -116,8 +116,12 @@ namespace Proj2_BigBuckBank
             if (Validator.isDecimal(txtAcctNumFrom, "From Account") == false
                 || Validator.isDecimal(txtAcctNumTo, "To Account") == false
                 || Validator.isGreaterNum(0, txtAmount, "Amount") == false)
+            {
+                txtAcctNumFrom.Text = "";
+                txtAcctNumTo.Text = "";
+                txtAmount.Text = "";
                 return false;
-           
+            }
             else
                 return true;
         }

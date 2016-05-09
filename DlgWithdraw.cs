@@ -63,6 +63,7 @@ namespace Proj2_BigBuckBank
                         if (selectedButton == DialogResult.OK)
                         {
                             frmReceipt.Close();
+                
                         }
 
                         this.DialogResult = DialogResult.OK; //close dialog window
@@ -85,7 +86,11 @@ namespace Proj2_BigBuckBank
         {
             if (Validator.isDecimal(txtAcctNum, "Account Number") == false
                || Validator.isGreaterNum(0, txtAmount, "Amount") == false)
+            {
+                txtAcctNum.Text = "";
+                txtAmount.Text = "";
                 return false;
+            }
             else
                 return true;
         }
