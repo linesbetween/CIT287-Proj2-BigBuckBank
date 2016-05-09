@@ -56,6 +56,12 @@
     <Compile Include="DlgDeposit.Designer.cs">
       <DependentUpon>DlgDeposit.cs</DependentUpon>
     </Compile>
+    <Compile Include="DlgTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgTransfer.Designer.cs">
+      <DependentUpon>DlgTransfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="DlgWithdraw.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DlgDeposit.resx">
       <DependentUpon>DlgDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgTransfer.resx">
+      <DependentUpon>DlgTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgWithdraw.resx">
       <DependentUpon>DlgWithdraw.cs</DependentUpon>

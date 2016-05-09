@@ -51,3 +51,5 @@ obj/Debug/Proj2-BigBuckBank.pdb
 obj/Debug/Proj2-BigBuckBank.csproj.FileListAbsolute.txt
 *.Cache
 obj/Debug/Proj2-BigBuckBank.pdb
+*.Cache
+obj/Debug/Proj2-BigBuckBank.csproj.GenerateResource.Cache

@@ -14,9 +14,10 @@ namespace Proj2_BigBuckBank
     {
         int numOfTrial;
         AdminAcct adminAcct;
-        public List<User> userList = new List<User>(); // List of users
+        public List<User> userList; // List of users
         IEnumerable<User> currentUserQuery;
         User currentUser;
+        List<int> accountNumList;
         DataToAdmin dataToAdmin;
 
         public FrmLogin()
@@ -33,15 +34,23 @@ namespace Proj2_BigBuckBank
             User user3 = new User("Cathy123", "3333", 10000003, 3000, 20000003, 3000);
             User user4 = new User("Doe12345", "4444", 10000004, 3000, 20000004, 4000);
 
+            userList = new List<User>();
             userList.Add(user1);
             userList.Add(user2);
             userList.Add(user3);
             userList.Add(user4);
 
+            accountNumList = new List<int>();
             for (int i = 0; i < userList.Count; i++)
             {
-                txtTest.AppendText(userList[i].toString());
+                accountNumList.Add(userList[i].getCheckAcct());
+                accountNumList.Add(userList[i].getSaveAcct());
             }
+
+                for (int i = 0; i < userList.Count; i++)
+                {
+                    txtTest.AppendText(userList[i].toString());
+                }
         }
 
         private void btnUserLogin_Click(object sender, EventArgs e)
@@ -66,7 +75,7 @@ namespace Proj2_BigBuckBank
                     currentUser = user;
 
                 //TODO open new dialog
-                FrmUserMenu userMenu = new FrmUserMenu(this, currentUser);
+                FrmUserMenu userMenu = new FrmUserMenu(this, currentUser, accountNumList, userList);
                 this.Visible = false;
 
                 //passDataToUserMenu(userMenu, userList[1]);
@@ -132,6 +141,7 @@ namespace Proj2_BigBuckBank
                     txtUserPsw.Enabled = true;
                     btnUserLogin.Enabled = true;
                     this.Visible = true;
+                    dlgAdmin.Close();
                 }
 
             }

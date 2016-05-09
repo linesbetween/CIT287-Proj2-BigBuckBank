@@ -24,3 +24,4 @@ C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Debug\Proj2_BigB
 C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Debug\Proj2_BigBuckBank.DlgWithdraw.resources
 C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Debug\Proj2-BigBuckBank.csprojResolveAssemblyReference.cache
 C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Debug\Proj2_BigBuckBank.DlgBalance.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Debug\Proj2_BigBuckBank.DlgTransfer.resources

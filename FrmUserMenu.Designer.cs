@@ -97,6 +97,7 @@
             this.rBtnTransfer.TabStop = true;
             this.rBtnTransfer.Text = "Transfer Funds";
             this.rBtnTransfer.UseVisualStyleBackColor = true;
+            this.rBtnTransfer.CheckedChanged += new System.EventHandler(this.rBtnTransfer_CheckedChanged);
             // 
             // rBtnExit
             // 

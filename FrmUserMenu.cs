@@ -14,7 +14,11 @@ namespace Proj2_BigBuckBank
     {
         FrmLogin frmLogin;
         User currentUser;
+        List<int> accountNumList;
+        List<User> userList;
         string transactionsStr;
+        int accountFrom, accountTo;
+        double transferAmount;
 
         public FrmUserMenu()
         {
@@ -22,11 +26,12 @@ namespace Proj2_BigBuckBank
             transactionsStr = "";
         }
 
-        public FrmUserMenu(FrmLogin frmLogin, User currentUser):this()
+        public FrmUserMenu(FrmLogin frmLogin, User currentUser, List<int>  accountNumList , List <User> users):this()
         {
             this.frmLogin = frmLogin; // ny reference??? refer to frmlogin
             this.currentUser = currentUser; //refer to 
-    
+            this.accountNumList = accountNumList;
+            this.userList = users;
         }
 
         //public void setUser(User user){ this.user = user;}
@@ -48,6 +53,7 @@ namespace Proj2_BigBuckBank
                 {
                     this.Visible = true;
                     transactionsStr += dlgDeposit.getTransactionMsg();
+                    dlgDeposit.Close();
                 }
 
                 rBtnDeposit.Checked = false;
@@ -66,6 +72,7 @@ namespace Proj2_BigBuckBank
                 {
                     this.Visible = true;
                     transactionsStr += dlgWithdraw.getTransactionMsg();
+                    dlgWithdraw.Close();
                 }
 
                 rBtnWithdraw.Checked = false;
@@ -83,9 +90,41 @@ namespace Proj2_BigBuckBank
                 if (selectButton == DialogResult.OK || selectButton == DialogResult.Cancel)
                 {
                     this.Visible = true;
+                    dlgBalance.Close();
                 }
 
-                rBtnWithdraw.Checked = false;
+                rBtnBalance.Checked = false;
+            }
+        }
+
+        private void rBtnTransfer_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rBtnTransfer.Checked == true)
+            {
+                this.Visible = false;
+                DlgTransfer dlgTransfer = new DlgTransfer(this.currentUser, accountNumList);
+                DialogResult selectButton = dlgTransfer.ShowDialog();
+
+                if (selectButton == DialogResult.OK || selectButton == DialogResult.Cancel)
+                {
+                    this.Visible = true;
+                    transactionsStr += dlgTransfer.getTransactionMsg();
+                    this.accountFrom = dlgTransfer.getAccountFrom();
+                    this.accountTo = dlgTransfer.getAccountTo();
+                    this.transferAmount = dlgTransfer.getTransferAmount();
+
+                    foreach (User user in userList)
+                    {
+                        if (user.getCheckAcct() == accountTo)
+                            user.setCheckAmount(user.getCheckAmount() + transferAmount);
+                        else if (user.getSaveAcct() == accountTo)
+                            user.setSaveAmount(user.getSaveAmount() + transferAmount);
+                    }
+
+                    dlgTransfer.Close();
+                }
+
+                rBtnTransfer.Checked = false;
             }
         } 
 

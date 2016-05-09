@@ -15,10 +15,21 @@ namespace Proj2_BigBuckBank
                 return true;
             else
             {
-                MessageBox.Show("Account doesn't exist", "Error");
+                MessageBox.Show("Account " + num + " doesn't belong to user " + user.userId , "Warning");
                 return false;
             }
 
+        }
+
+        public bool isExistAcctInList(int num, List<int> list)
+        {
+            foreach (int account in list)
+            {
+                if (num == account)
+                    return true;
+            }
+            MessageBox.Show("Account " + num + " doesn't exists.", "Error");
+            return false;
         }
 
         public bool isGreaterNum(decimal num, TextBox txtBox, string name = "")

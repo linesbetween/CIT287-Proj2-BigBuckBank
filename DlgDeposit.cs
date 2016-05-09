@@ -58,9 +58,13 @@ namespace Proj2_BigBuckBank
                         "balance: ".PadRight(10) + String.Format("{0:c2}", currentUser.getSaveAmount()).PadRight(12);
 
                     FrmReceipt frmReceipt = new FrmReceipt(receiptMsg);
-                    frmReceipt.ShowDialog();
+                    DialogResult selectedButton = frmReceipt.ShowDialog();
+                    if (selectedButton == DialogResult.OK)
+                    {
+                        frmReceipt.Close();
+                    }
 
-                    this.DialogResult = DialogResult.OK; //close dialog window
+                    this.DialogResult = DialogResult.OK; 
                 }
                 else
                 {
