@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 85);
+            this.label1.Location = new System.Drawing.Point(68, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 25);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 161);
+            this.label2.Location = new System.Drawing.Point(68, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 1;
@@ -56,23 +56,23 @@
             // 
             // txtAcctNum
             // 
-            this.txtAcctNum.Location = new System.Drawing.Point(273, 80);
+            this.txtAcctNum.Location = new System.Drawing.Point(284, 62);
             this.txtAcctNum.Name = "txtAcctNum";
             this.txtAcctNum.Size = new System.Drawing.Size(193, 29);
             this.txtAcctNum.TabIndex = 2;
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(273, 161);
+            this.txtAmount.Location = new System.Drawing.Point(284, 143);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(193, 29);
             this.txtAmount.TabIndex = 3;
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(408, 249);
+            this.btnOk.Location = new System.Drawing.Point(377, 231);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(100, 37);
+            this.btnOk.Size = new System.Drawing.Size(100, 40);
             this.btnOk.TabIndex = 4;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -81,9 +81,9 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(273, 249);
+            this.btnCancel.Location = new System.Drawing.Point(225, 231);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 37);
+            this.btnCancel.Size = new System.Drawing.Size(100, 40);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -92,7 +92,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 338);
+            this.ClientSize = new System.Drawing.Size(576, 336);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtAmount);
@@ -100,6 +101,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "DlgDeposit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deposit";
             this.ResumeLayout(false);
             this.PerformLayout();

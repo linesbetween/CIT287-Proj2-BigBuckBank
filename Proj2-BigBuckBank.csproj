@@ -44,11 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DlgBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgBalance.Designer.cs">
+      <DependentUpon>DlgBalance.cs</DependentUpon>
+    </Compile>
     <Compile Include="DlgDeposit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DlgDeposit.Designer.cs">
       <DependentUpon>DlgDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgWithdraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgWithdraw.Designer.cs">
+      <DependentUpon>DlgWithdraw.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
@@ -71,8 +83,21 @@
     <Compile Include="InputValidate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReceipt.Designer.cs">
+      <DependentUpon>FrmReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="DlgBalance.resx">
+      <DependentUpon>DlgBalance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgDeposit.resx">
       <DependentUpon>DlgDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgWithdraw.resx">
+      <DependentUpon>DlgWithdraw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
@@ -92,6 +117,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmReceipt.resx">
+      <DependentUpon>FrmReceipt.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -17,6 +17,7 @@ namespace Proj2_BigBuckBank
         double newAmount;
         User currentUser;
         InputValidate Validator;
+        string transactionMsg;
         string receiptMsg;
 
         public DlgDeposit()
@@ -30,6 +31,7 @@ namespace Proj2_BigBuckBank
             this.currentUser = user;
         }
 
+        public string getTransactionMsg() { return transactionMsg; }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
@@ -44,16 +46,26 @@ namespace Proj2_BigBuckBank
                     currentUser.setAmountGeneral(accountNum, newAmount); //change current user
 
                     //print temporary receipt
+                    transactionMsg = Environment.NewLine + "Transaction: Deposit to account " + accountNum + ", Amount: " + amount;
                     receiptMsg =
-                        "\n User Id: ".PadRight(8) + currentUser.userId.PadRight(8) +
-                        "\n Checking account: ".PadRight(20) + String.Format("{0}", currentUser.getCheckAcct() % 10000).PadRight(12) +
-                            ", balance: ".PadRight(10) + String.Format("{0,c}", currentUser.getCheckAmount()).PadRight(12) +
-                        "\n Saving account: ".PadRight(20) + String.Format("{0}", currentUser.getSaveAcct() % 10000).PadRight(12) +
-                            ", balance: ".PadRight(10) + String.Format("{0,c}", currentUser.getSaveAmount()).PadRight(12);
+                        transactionMsg + Environment.NewLine +
+                        Environment.NewLine + "User Id: ".PadRight(8) + currentUser.userId.PadRight(8) +
+                        Environment.NewLine + "Checking account (last 4): ".PadRight(30) + 
+                        currentUser.getLastDigits( currentUser.getCheckAcct(),4).PadRight(12) +
+                        "balance: ".PadRight(10) + String.Format("{0:c2}", currentUser.getCheckAmount()).PadRight(12) +
+                        Environment.NewLine + "Saving account (last 4):   ".PadRight(30) +
+                        currentUser.getLastDigits(currentUser.getSaveAcct(), 4).PadRight(12) +
+                        "balance: ".PadRight(10) + String.Format("{0:c2}", currentUser.getSaveAmount()).PadRight(12);
 
- 
+                    FrmReceipt frmReceipt = new FrmReceipt(receiptMsg);
+                    frmReceipt.ShowDialog();
 
                     this.DialogResult = DialogResult.OK; //close dialog window
+                }
+                else
+                {
+                    txtAcctNum.Text = "";
+                    txtAmount.Text = "";
                 }
             }
             
@@ -61,12 +73,12 @@ namespace Proj2_BigBuckBank
 
         private bool inputValid()
         {
-            if (Validator.checkFilled(txtAcctNum, "Account Number") == false 
-                || Validator.checkFilled(txtAmount, "Amount") == false)
+            if (Validator.isDecimal(txtAcctNum, "Account Number") == false 
+                || Validator.isGreaterNum(0,txtAmount, "Amount") == false)
                 return false;
-            else if (Validator.isDecimal(txtAcctNum, "Account Number") == false 
-                || Validator.isDecimal(txtAmount, "Amount") == false)
-                return false;
+           // else if (Validator.isDecimal(txtAcctNum, "Account Number") == false 
+                //|| Validator.isDecimal(txtAmount, "Amount") == false)
+                //return false;
             else
                 return true;
         }

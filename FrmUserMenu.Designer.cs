@@ -43,7 +43,7 @@
             // btnTest
             // 
             this.btnTest.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnTest.Location = new System.Drawing.Point(382, 20);
+            this.btnTest.Location = new System.Drawing.Point(415, 20);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(134, 42);
             this.btnTest.TabIndex = 0;
@@ -73,6 +73,7 @@
             this.rBtnWithdraw.TabStop = true;
             this.rBtnWithdraw.Text = "Make a Withdraw";
             this.rBtnWithdraw.UseVisualStyleBackColor = true;
+            this.rBtnWithdraw.CheckedChanged += new System.EventHandler(this.rBtnWithdraw_CheckedChanged);
             // 
             // rBtnBalance
             // 
@@ -84,6 +85,7 @@
             this.rBtnBalance.TabStop = true;
             this.rBtnBalance.Text = "Check Balance";
             this.rBtnBalance.UseVisualStyleBackColor = true;
+            this.rBtnBalance.CheckedChanged += new System.EventHandler(this.rBtnBalance_CheckedChanged);
             // 
             // rBtnTransfer
             // 
@@ -151,6 +153,7 @@
             this.Controls.Add(this.gBoxMenu);
             this.Controls.Add(this.btnTest);
             this.Name = "FrmUserMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Menu";
             this.gBoxMenu.ResumeLayout(false);
             this.gBoxMenu.PerformLayout();

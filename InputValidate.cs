@@ -21,17 +21,36 @@ namespace Proj2_BigBuckBank
 
         }
 
+        public bool isGreaterNum(decimal num, TextBox txtBox, string name = "")
+        {
+            if (isDecimal(txtBox, name) == true)
+            {
+                if (Convert.ToDecimal(txtBox.Text) > num)
+                    return true;
+                else {
+                    MessageBox.Show(name + " must be greater than " + String.Format("{0}", num), "Error");
+                    return false; 
+                }
+            }
+            else return false;
+        }
 
         public bool isDecimal(TextBox txtBox, string name = "")
         {
             decimal number;
-            if (Decimal.TryParse(txtBox.Text, out number))
-                return true;
-            else
+
+            if (checkFilled(txtBox, name) == true)
             {
-                MessageBox.Show("Input must be numberic " + name, "Error");
-                return false;
+                if (Decimal.TryParse(txtBox.Text, out number))
+                    return true;
+                else
+                {
+                    MessageBox.Show("Input must be numberic " + name, "Error");
+                    return false;
+                }
             }
+
+            else return false;
         }
 
         public bool checkFilled(TextBox txtBox, string name = "")

@@ -36,7 +36,7 @@
             // btnClear
             // 
             this.btnClear.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnClear.Location = new System.Drawing.Point(111, 81);
+            this.btnClear.Location = new System.Drawing.Point(110, 54);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(162, 48);
             this.btnClear.TabIndex = 0;
@@ -47,7 +47,7 @@
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnExit.Location = new System.Drawing.Point(111, 161);
+            this.btnExit.Location = new System.Drawing.Point(110, 134);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(162, 49);
             this.btnExit.TabIndex = 1;
@@ -58,7 +58,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(111, 244);
+            this.btnCancel.Location = new System.Drawing.Point(110, 217);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(162, 46);
             this.btnCancel.TabIndex = 2;
@@ -70,12 +70,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 365);
+            this.ClientSize = new System.Drawing.Size(376, 336);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Name = "FrmAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.ResumeLayout(false);
 

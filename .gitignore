@@ -48,3 +48,6 @@ Temporary Items
 *.pdb
 obj/Debug/Proj2-BigBuckBank.pdb
 *.pdb
+obj/Debug/Proj2-BigBuckBank.csproj.FileListAbsolute.txt
+*.Cache
+obj/Debug/Proj2-BigBuckBank.pdb
