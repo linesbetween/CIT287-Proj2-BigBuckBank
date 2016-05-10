@@ -28,10 +28,10 @@ namespace Proj2_BigBuckBank
             adminAcct = new AdminAcct("Admin123", "0000");
 
             //initialize user datas
-            User user1 = new User("Alice123", "1111", 10000001, 20000001, 1000);
-            User user2 = new User("Bob12345", "2222", 10000002, 20000002, 2000);
-            User user3 = new User("Cathy123", "3333", 10000003, 20000003, 3000);
-            User user4 = new User("Doe12345", "4444", 10000004, 20000004, 4000);
+            User user1 = new User("Alice123", "1111", 10000001, 1000, 20000001, 1000);
+            User user2 = new User("Bob12345", "2222", 10000002, 2000, 20000002, 2000);
+            User user3 = new User("Cathy123", "3333", 10000003, 3000, 20000003, 3000);
+            User user4 = new User("Doe12345", "4444", 10000004, 3000, 20000004, 4000);
 
             userList.Add(user1);
             userList.Add(user2);
@@ -67,10 +67,16 @@ namespace Proj2_BigBuckBank
 
                 //TODO open new dialog
                 FrmUserMenu userMenu = new FrmUserMenu(this, currentUser);
+                this.Visible = false;
+
                 //passDataToUserMenu(userMenu, userList[1]);
                 DialogResult selectedButton =  userMenu.ShowDialog();
-                if (selectedButton == DialogResult.Yes) // when userMenu returns, refresh test display
+                if (selectedButton == DialogResult.Yes || selectedButton == DialogResult.OK
+                    || selectedButton == DialogResult.Cancel) // when userMenu returns, refresh test display
                 {
+                    this.Visible = true;
+                    this.clearDisplay();
+
                     txtTest.Clear();
                     for (int i = 0; i < userList.Count; i++)
                     {
@@ -198,14 +204,39 @@ namespace Proj2_BigBuckBank
     }
    
 // /////////////////////class for each User data
+    public class Account
+    {
+        int accountNum;
+        double amount;
+
+        public Account()
+        {
+            accountNum = 0;
+            amount = 0;
+        }
+
+        public Account(int num, double amount) 
+        {
+            accountNum = num;
+            this.amount = amount;
+        }
+
+        public int getAccountNum() { return accountNum; }
+        public double getAmount() { return amount; }
+        public void setAmount(double amount) { this.amount = amount; }
+    }
+
     public class User
     {
         public string userId;
         string password;
-        int checkAcctNum;
-        int saveAcctNum;
-        double startBalance;
+        //int checkAcctNum ;
+        //int saveAcctNum ;
+        //double startBalance;
+        Account saveAccount;
+        Account checkAccount;
 
+        /*
         public User(string userId, string password, int checkAcct, int saveAcct, double startBalance)
         {
             this.userId = userId;
@@ -214,17 +245,53 @@ namespace Proj2_BigBuckBank
             this.saveAcctNum = saveAcct;
             this.startBalance = startBalance;
         }
+         * */
+
+        public User(string userId, string password, int checkAcct, double checkBalance, int saveAcct, double saveBalance)
+        {
+            this.userId = userId;
+            this.password = password;
+            //this.checkAcctNum = checkAcct;
+            //this.saveAcctNum = saveAcct;
+            //this.startBalance = startBalance;
+            saveAccount = new Account(checkAcct, checkBalance);
+            checkAccount = new Account(saveAcct, saveBalance);
+        }
 
         public string getUserId() { return userId; }
         public string getpassWord() { return password; }
-        public void setStartBalance(int amount) { startBalance = amount; }
+        public int getCheckAcct() { return checkAccount.getAccountNum(); }
+        public int getSaveAcct() { return saveAccount.getAccountNum(); }
+        public double getCheckAmount() { return checkAccount.getAmount(); }
+        public double getSaveAmount() { return saveAccount.getAmount(); }
+        public double getAmountGeneral(int accountNum){
+            if (accountNum == getCheckAmount())
+                return checkAccount.getAmount();
+            else if (accountNum == getSaveAcct())
+                return saveAccount.getAmount();
+            else{
+                MessageBox.Show("UserID" + getUserId() + " doesn't have this account", "Error");
+                return 0;
+            }
+        }
+        public void setCheckAmount(double amount) { checkAccount.setAmount(amount); }
+        public void setSaveAmount(double amount) { saveAccount.setAmount(amount); }
+        public void setAmountGeneral(int accountNum, double amount) {
+            if (accountNum == getCheckAmount())
+                setCheckAmount(amount);
+            else if (accountNum == getSaveAcct())
+                setSaveAmount(amount);
+            else
+                MessageBox.Show("UserID" + getUserId() + " doesn't have this account", "Error");
+        }
 
         public string toString()
         {
             return userId.PadRight(12) + (String.Format("{0}", password)).PadRight(8)
-                + (String.Format("{0}", checkAcctNum)).PadRight(12)
-                + (String.Format("{0}", saveAcctNum)).PadRight(12) 
-                + (String.Format("{0:c}", startBalance)).PadRight(8) + "\n";
+                + (String.Format("{0}", checkAccount.getAccountNum())).PadRight(12)
+                + (String.Format("{0:c}", checkAccount.getAmount())).PadRight(12)
+                + (String.Format("{0}", saveAccount.getAccountNum())).PadRight(12)
+                + (String.Format("{0:c}", saveAccount.getAmount())).PadRight(8) + "\n";
         }
     }
 

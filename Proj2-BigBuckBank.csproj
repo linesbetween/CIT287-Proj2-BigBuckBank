@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DlgDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgDeposit.Designer.cs">
+      <DependentUpon>DlgDeposit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,8 +68,12 @@
     <Compile Include="FrmUserMenu.Designer.cs">
       <DependentUpon>FrmUserMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputValidate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DlgDeposit.resx">
+      <DependentUpon>DlgDeposit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>

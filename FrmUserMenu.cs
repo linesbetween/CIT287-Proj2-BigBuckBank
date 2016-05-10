@@ -13,7 +13,7 @@ namespace Proj2_BigBuckBank
     public partial class FrmUserMenu : Form
     {
         FrmLogin frmLogin;
-        User user;
+        User currentUser;
 
         public FrmUserMenu()
         {
@@ -22,8 +22,8 @@ namespace Proj2_BigBuckBank
 
         public FrmUserMenu(FrmLogin frmLogin, User currentUser):this()
         {
-            this.frmLogin = frmLogin; // ny reference???
-            user = currentUser;
+            this.frmLogin = frmLogin; // ny reference??? refer to frmlogin
+            this.currentUser = currentUser; //refer to 
     
         }
 
@@ -31,13 +31,17 @@ namespace Proj2_BigBuckBank
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            user.setStartBalance(800);
+            currentUser.setCheckAmount(800);
         }
 
         private void rBtnDeposit_CheckedChanged(object sender, EventArgs e)
         {
+            DlgDeposit dlgDeposit = new DlgDeposit(this.currentUser);
+            DialogResult selectButton = dlgDeposit.ShowDialog();
 
+            
         } 
+
 
     }
 }
