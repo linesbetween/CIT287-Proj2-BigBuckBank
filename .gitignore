@@ -53,3 +53,5 @@ obj/Debug/Proj2-BigBuckBank.csproj.FileListAbsolute.txt
 obj/Debug/Proj2-BigBuckBank.pdb
 *.Cache
 obj/Debug/Proj2-BigBuckBank.csproj.GenerateResource.Cache
+*.config
+obj/Release/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs

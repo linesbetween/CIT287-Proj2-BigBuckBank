@@ -33,11 +33,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtUserId = new System.Windows.Forms.TextBox();
-            this.txtUserPsw = new System.Windows.Forms.TextBox();
             this.txtAdminId = new System.Windows.Forms.TextBox();
             this.txtAdminPsw = new System.Windows.Forms.TextBox();
             this.btnUserLogin = new System.Windows.Forms.Button();
             this.btnAdminLogin = new System.Windows.Forms.Button();
+            this.txtUserPsw = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -83,13 +83,6 @@
             this.txtUserId.Size = new System.Drawing.Size(205, 29);
             this.txtUserId.TabIndex = 4;
             // 
-            // txtUserPsw
-            // 
-            this.txtUserPsw.Location = new System.Drawing.Point(258, 130);
-            this.txtUserPsw.Name = "txtUserPsw";
-            this.txtUserPsw.Size = new System.Drawing.Size(205, 29);
-            this.txtUserPsw.TabIndex = 5;
-            // 
             // txtAdminId
             // 
             this.txtAdminId.Location = new System.Drawing.Point(258, 280);
@@ -124,6 +117,13 @@
             this.btnAdminLogin.UseVisualStyleBackColor = true;
             this.btnAdminLogin.Click += new System.EventHandler(this.btnAdminLogin_Click);
             // 
+            // txtUserPsw
+            // 
+            this.txtUserPsw.Location = new System.Drawing.Point(258, 130);
+            this.txtUserPsw.Name = "txtUserPsw";
+            this.txtUserPsw.Size = new System.Drawing.Size(205, 29);
+            this.txtUserPsw.TabIndex = 5;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -155,11 +155,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtUserId;
-        private System.Windows.Forms.TextBox txtUserPsw;
         private System.Windows.Forms.TextBox txtAdminId;
         private System.Windows.Forms.TextBox txtAdminPsw;
         private System.Windows.Forms.Button btnUserLogin;
         private System.Windows.Forms.Button btnAdminLogin;
+        private System.Windows.Forms.TextBox txtUserPsw;
     }
 }
 

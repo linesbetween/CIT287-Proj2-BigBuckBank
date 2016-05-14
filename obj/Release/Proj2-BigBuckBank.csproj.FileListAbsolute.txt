@@ -1,0 +1,17 @@
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\bin\Release\Proj2-BigBuckBank.exe.config
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\bin\Release\Proj2-BigBuckBank.exe
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\bin\Release\Proj2-BigBuckBank.pdb
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2-BigBuckBank.csprojResolveAssemblyReference.cache
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.DlgBalance.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.DlgDeposit.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.DlgExit.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.DlgTransfer.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.DlgWithdraw.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.FrmAdmin.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.FrmLogin.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.FrmUserMenu.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.Properties.Resources.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2_BigBuckBank.FrmReceipt.resources
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2-BigBuckBank.csproj.GenerateResource.Cache
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2-BigBuckBank.exe
+C:\Users\X\Documents\Course\CIT287\CIT287-Proj2-BigBuckBank\obj\Release\Proj2-BigBuckBank.pdb

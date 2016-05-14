@@ -52,6 +52,8 @@ namespace Proj2_BigBuckBank
                     txtTest.AppendText(userList[i].toString());
                 }
              * */
+
+            txtUserPsw.PasswordChar = '*';
         }
 
         private void btnUserLogin_Click(object sender, EventArgs e)
